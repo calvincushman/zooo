@@ -20,7 +20,7 @@ import { Animal } from '../animal.model';
   </ul>
   `
 })
-export class AnimalListComponent implements OnInit {
+export class AnimalComponent implements OnInit {
   @Input() childAnimalList: Animal[];
   @Output() clickSender = new EventEmitter();
 
