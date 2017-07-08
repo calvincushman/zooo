@@ -13,7 +13,7 @@ import { Animal } from './animal.model';
 
     <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
 
-    <new-animal></new-animal>
+    <new-animal (newAnimalSender)= "addAnimal($event)"></new-animal>
 
   </div>
   `
@@ -21,6 +21,7 @@ import { Animal } from './animal.model';
 export class AppComponent {
   masterAnimalList: Animal[] = [
   new Animal("http://www.backwaterreptiles.com/images/turtles/red-eared-slider-turtle-for-sale.jpg", "tookie", "turtel", "male", 22, "nyc", "tacos"),
+
   new Animal("pp", "Tereasa", "dog", "female", 7, "tomorrowland", "spaghetti")
   ];
 
@@ -32,5 +33,9 @@ export class AppComponent {
 
   editAnimal(clickedAnimal) {
     this.selectedAnimal = clickedAnimal;
+  }
+
+  addAnimal(newAnimalFromChild: Animal) {
+    this.masterAnimalList.push(newAnimalFromChild);
   }
 }

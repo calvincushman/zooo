@@ -2,7 +2,7 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { Animal } from '../animal.model';
 
 @Component({
-  selector: 'app-edit',
+  selector: 'edit-animal',
   template: `
   <div *ngIf="selectedAnimal">
     <h3>Edit Animal</h3>
