@@ -3,7 +3,7 @@ import { Animal } from './animal.model';
 
 @Pipe({
   name: "baby",
-  pure: baby
+  pure: true
 })
 
 export class BabyPipe implements PipeTransform {
@@ -18,12 +18,12 @@ export class BabyPipe implements PipeTransform {
     return output;
   } else if (desiredAgeGroup === "adultAnimals") {
     for (var i=0; i < input.length; i++) {
-      if (input[i].age >= 2) {
+      if (input[i].age >= 3) {
         output.push(input[i]);
       }
     }
     return output;
-  } else (desiredAgeGroup === "allAnimals") {
+  } else if (desiredAgeGroup === "allAnimals") {
     for (var i=0; i < input.length; i ++) {
       output.push(input[i]);
     }
@@ -31,4 +31,5 @@ export class BabyPipe implements PipeTransform {
   } else{
     return input;
   }
+}
 }

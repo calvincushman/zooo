@@ -7,18 +7,30 @@ import { Animal } from '../animal.model';
     <div *ngIf="childSelectedAnimal">
       <h2>{{childSelectedAnimal.name}}</h2>
       <h3>Edit Animal</h3>
-      <label>Enter Name</label>
-      <input [(ngModel)]="childSelectedAnimal.name">
-      <label>Enter Species</label>
-      <input [(ngModel)]="childSelectedAnimal.species">
-      <label>Enter sex</label>
-      <input [(ngModel)]="childSelectedAnimal.sex">
-      <label>Enter age</label>
-      <input [(ngModel)]="childSelectedAnimal.age">
-      <label>Enter Location</label>
-      <input [(ngModel)]="childSelectedAnimal.location">
-      <label>Enter Diet</label>
-      <input [(ngModel)]="childSelectedAnimal.diet">
+      <li>
+        <label>Enter Name</label>
+        <input [(ngModel)]="childSelectedAnimal.name">
+      </li>
+      <li>
+        <label>Enter Species</label>
+        <input [(ngModel)]="childSelectedAnimal.species">
+      </li>
+      <li>
+        <label>Enter sex</label>
+        <input [(ngModel)]="childSelectedAnimal.sex">
+      </li>
+      <li>
+        <label>Enter age</label>
+        <input [(ngModel)]="childSelectedAnimal.age">
+      </li>
+      <li>
+        <label>Enter Location</label>
+        <input [(ngModel)]="childSelectedAnimal.location">
+      </li>
+      <li>
+        <label>Enter Diet</label>
+        <input [(ngModel)]="childSelectedAnimal.diet">
+      </li>
       <button (click)="doneButtonClicked()">Done</button>
     </div>
   `

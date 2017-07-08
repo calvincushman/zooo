@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Animal } from '../animal.model';
+import { BabyPipe } from '../baby.pipe';
 
 @Component({
   selector: 'animal-list',
@@ -10,7 +11,7 @@ import { Animal } from '../animal.model';
     <option value="adultAnimals">Adult Animals</option>
   </select>
   <ul>
-    <li *ngFor="let currentAnimal of childAnimalList | baby">
+    <div class="animal-card" *ngFor="let currentAnimal of childAnimalList | baby:filterByAge">
       <ul>
         <img src="{{currentAnimal.picture}}">
         <li>{{currentAnimal.name}}</li>
@@ -21,7 +22,7 @@ import { Animal } from '../animal.model';
         <li>{{currentAnimal.diet}}</li>
       </ul>
       <button (click)="editButtonClicked(currentAnimal)">Edit Details</button>
-    </li>
+    </div>
   </ul>
   `
 })
@@ -29,7 +30,7 @@ export class AnimalComponent {
   @Input() childAnimalList: Animal[];
   @Output() clickSender = new EventEmitter();
 
-  filterByAge: string = "babyAnimals";
+  filterByAge: string = "allAnimals";
 
   onChange(optionFromMenu) {
     this.filterByAge = optionFromMenu;

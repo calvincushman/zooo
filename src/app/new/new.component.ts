@@ -5,22 +5,37 @@ import { Animal } from '../animal.model';
   selector: 'new-animal',
   template:`
   <h1>New Animal</h1>
-  <div>
-    <label>Enter Picture URL:</label>
-    <input #newPicture>
-    <label>Enter Name:</label>
-    <input #newName>
-    <label>Enter Species</label>
-    <input #newSpecies>
-    <label>Enter Sex</label>
-    <input #newSex>
-    <label>Enter Age</label>
-    <input #newAge>
-    <label>Enter Location</label>
-    <input #newLocation>
-    <label>Enter Diet</label>
-    <input #newDiet>
-    <button (click)="submitForm(newPicture.value, newName.value, newSpecies.value, newSex.value, newAge.value, newLocation.value, newDiet.value); newPicture.value=''; newName.value=''; newSpecies.value=''; newSex.value=''; newAge.value=''; newLocation.value=''; newDiet.value='';">Add Animal</button>
+  <div id="new-animal">
+    <li>
+      <label>Enter Picture URL:</label>
+      <input #newPicture>
+    </li>
+    <li>
+      <label>Enter Name:</label>
+      <input #newName>
+    </li>
+    <li>
+      <label>Enter Species</label>
+      <input #newSpecies>
+    </li>
+    <li>
+      <label>Enter Sex</label>
+      <input #newSex>
+    </li>
+    <li>
+      <label>Enter Age</label>
+      <input #newAge>
+    <li>
+      <label>Enter Location</label>
+      <input #newLocation>
+    </li>
+    <li>
+      <label>Enter Diet</label>
+      <input #newDiet>
+    </li>
+    <li>
+      <button (click)="submitForm(newPicture.value, newName.value, newSpecies.value, newSex.value, newAge.value, newLocation.value, newDiet.value); newPicture.value=''; newName.value=''; newSpecies.value=''; newSex.value=''; newAge.value=''; newLocation.value=''; newDiet.value='';">Add Animal</button>
+    </li>
   </div>
   `
 })
