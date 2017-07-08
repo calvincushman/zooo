@@ -19,20 +19,21 @@ import { Animal } from './animal.model';
   `
 })
 export class AppComponent {
+
+  selectedAnimal = null;
+
   masterAnimalList: Animal[] = [
   new Animal("http://www.backwaterreptiles.com/images/turtles/red-eared-slider-turtle-for-sale.jpg", "tookie", "turtel", "male", 22, "nyc", "tacos"),
 
   new Animal("pp", "Tereasa", "dog", "female", 7, "tomorrowland", "spaghetti")
   ];
 
-  selectedAnimal = null;
+  editAnimal(clickedAnimal) {
+    this.selectedAnimal = clickedAnimal;
+  }
 
   finishedEditing() {
     this.selectedAnimal = null;
-  }
-
-  editAnimal(clickedAnimal) {
-    this.selectedAnimal = clickedAnimal;
   }
 
   addAnimal(newAnimalFromChild: Animal) {

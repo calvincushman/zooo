@@ -1,11 +1,16 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Animal } from '../animal.model';
 
 @Component({
   selector: 'animal-list',
   template: `
+  <select (change)="onChange($event.target.value)">
+    <option value="allAnimals" selected="selected">All Animals</option>
+    <option value="babyAnimals">Baby Animals</option>
+    <option value="adultAnimals">Adult Animals</option>
+  </select>
   <ul>
-    <li *ngFor="let currentAnimal of childAnimalList">
+    <li *ngFor="let currentAnimal of childAnimalList | baby">
       <ul>
         <img src="{{currentAnimal.picture}}">
         <li>{{currentAnimal.name}}</li>
@@ -20,15 +25,18 @@ import { Animal } from '../animal.model';
   </ul>
   `
 })
-export class AnimalComponent implements OnInit {
+export class AnimalComponent {
   @Input() childAnimalList: Animal[];
   @Output() clickSender = new EventEmitter();
 
-  editButtonClicked(animalToEdit: Animal) {
-    this.clickSender.emit(animalToEdit);
+  filterByAge: string = "babyAnimals";
+
+  onChange(optionFromMenu) {
+    this.filterByAge = optionFromMenu;
   }
 
-  ngOnInit() {
+  editButtonClicked(animalToEdit: Animal) {
+    this.clickSender.emit(animalToEdit);
   }
 
 }
