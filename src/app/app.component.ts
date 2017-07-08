@@ -7,7 +7,7 @@ import { Animal } from './animal.model';
   <div class="container">
     <h1>World of Animals</h1>
 
-    <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editTask($event)"></animal-list>
+    <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
 
     <hr>
 

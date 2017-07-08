@@ -20,7 +20,7 @@ import { Animal } from '../animal.model';
     <input #newLocation>
     <label>Enter Diet</label>
     <input #newDiet>
-    <button (click)="submitForm(newPicture.value, newName.value, newSpecies.value, newSex.value, newAge.value, newLocation.value, newDiet.value); newPicture.value='' newName.value='' newSpecies.value='' newSex.value='' newAge.value='' newLocation.value='' newDiet.value'';">Add Animal</button>
+    <button (click)="submitForm(newPicture.value, newName.value, newSpecies.value, newSex.value, newAge.value, newLocation.value, newDiet.value);">Add Animal</button>
   </div>
   `
 })
@@ -28,7 +28,7 @@ export class NewComponent implements OnInit {
   @Output() newAnimalSender = new EventEmitter();
 
   submitForm(picture: string, name: string, species: string, sex: string, age: number, location: string, diet: string) {
-    var newAnimalToAdd: Animal = new Animal(picture, name, species, sex, age, location, diet)
+    var newAnimalToAdd: Animal = new Animal(picture, name, species, sex, age, location, diet);
     this.newAnimalSender.emit(newAnimalToAdd);
   }
 
