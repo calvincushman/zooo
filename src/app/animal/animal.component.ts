@@ -5,23 +5,24 @@ import { BabyPipe } from '../baby.pipe';
 @Component({
   selector: 'animal-list',
   template: `
+  <h4>Get Me</h4>
   <select (change)="onChange($event.target.value)">
     <option value="allAnimals" selected="selected">All Animals</option>
     <option value="babyAnimals">Baby Animals</option>
     <option value="adultAnimals">Adult Animals</option>
   </select>
-  <ul>
+  <ul id="animal-cards">
     <div class="animal-card" *ngFor="let currentAnimal of childAnimalList | baby:filterByAge">
       <ul>
-        <img src="{{currentAnimal.picture}}">
-        <li>{{currentAnimal.name}}</li>
-        <li>{{currentAnimal.species}}</li>
-        <li>{{currentAnimal.sex}}</li>
-        <li>{{currentAnimal.age}}</li>
-        <li>{{currentAnimal.location}}</li>
-        <li>{{currentAnimal.diet}}</li>
+        <img id="card-image" src="{{currentAnimal.picture}}">
+        <li id="name">{{currentAnimal.name}}</li>
+        <li>Species: {{currentAnimal.species}}</li>
+        <li>Sex: {{currentAnimal.sex}}</li>
+        <li>Age: {{currentAnimal.age}} years old</li>
+        <li>Location: {{currentAnimal.location}}</li>
+        <li>Diet: {{currentAnimal.diet}}</li>
+        <button id="edit-button" (click)="editButtonClicked(currentAnimal)">Edit Details</button>
       </ul>
-      <button (click)="editButtonClicked(currentAnimal)">Edit Details</button>
     </div>
   </ul>
   `

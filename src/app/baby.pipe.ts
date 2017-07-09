@@ -11,21 +11,16 @@ export class BabyPipe implements PipeTransform {
     var output: Animal[]=[];
     if(desiredAgeGroup === "babyAnimals") {
     for (var i=0; i < input.length; i++) {
-      if (input[i].age <= 2) {
+      if (input[i].age <= 5) {
         output.push(input[i]);
       }
     }
     return output;
   } else if (desiredAgeGroup === "adultAnimals") {
     for (var i=0; i < input.length; i++) {
-      if (input[i].age >= 3) {
+      if (input[i].age >= 6) {
         output.push(input[i]);
       }
-    }
-    return output;
-  } else if (desiredAgeGroup === "allAnimals") {
-    for (var i=0; i < input.length; i ++) {
-      output.push(input[i]);
     }
     return output
   } else{

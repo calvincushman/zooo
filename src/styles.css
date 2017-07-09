@@ -1,1 +1,78 @@
-/* You can add global styles to this file, and also import other style files */
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.container {
+  border: solid #c9efcf 4px;
+}
+
+#top-banner {
+  background-image: url(../img/headerWallpaper.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+  height: 40vh;
+  width: 99vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  text-shadow: 5px 5px 5px black;
+  letter-spacing: .2em;
+  color: wheat;
+}
+
+li {
+  list-style: none;
+}
+
+.top {
+  background: wheat; browsers that do not support gradients */
+    background: -webkit-linear-gradient(wheat, springgreen, darkgreen); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(wheat, springgreen, darkgreen); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(wheat, springgreen, darkgreen); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(wheat, springgreen, darkgreen); /* Standard syntax */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+}
+
+/*animal cards*/
+
+#animal-cards {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.animal-card {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  margin: 1%;
+  width:23%;
+  height: 50%;
+  background-color: wheat;
+  opacity: .8;
+}
+
+#card-image {
+  width: 100%;
+  height: 50%;
+  border-radius: 5px;
+
+}
+
+#name {
+  font-size: 25px;
+}
