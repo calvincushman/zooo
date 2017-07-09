@@ -5,7 +5,6 @@ import { BabyPipe } from '../baby.pipe';
 @Component({
   selector: 'animal-list',
   template: `
-  <h4>Get Me</h4>
   <select (change)="onChange($event.target.value)">
     <option value="allAnimals" selected="selected">All Animals</option>
     <option value="babyAnimals">Baby Animals</option>
