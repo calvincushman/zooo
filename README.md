@@ -1,3 +1,39 @@
+# _{ZooKeeper Animal App}_
+
+#### _{An application for adding new animals and editing current animals within the zoo database}, {July 2017}_
+
+#### By _**{Calvin Cushman}**_
+
+## Description
+
+_{This application allows zoo employees to track, add, and edit details of animals at a zoo as well as being able to sort which animals the user is looking at by age. }_
+
+## Setup/Installation Requirements
+
+* _open your terminal_
+* _type in: npm install -g @angular/cli (this installs Angular on you machine)_
+* _clone down the repository at: (https://github.com/calvincushman/zooo)_
+* _type into your terminal: cd zooo_
+* _type into your terminal: ng serve_
+* _if a tab doesn't automatically open in your browser open localhost4200 in the url input_
+
+## Known Bugs
+
+_{The only known bug at this time is that if you input a new animal after doing a pipe search an additional pipe search must be done before the new animal appears. }_
+
+## Support and contact details
+
+_{If you have any input, feedback, or need any help navigating this application feel free to reach me at calvincushman@gmail.com.}.}_
+
+## Technologies Used
+
+_{This application was built using Typescript within the angular-cli framework}_
+
+### License
+
+*{MIT}*
+
+Copyright (c) 2016 **_{Calvin Cushman}_**
 # Zoo
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.

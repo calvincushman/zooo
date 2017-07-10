@@ -28,6 +28,7 @@ body {
   position: fixed;
   z-index: 99;
   margin-top: -2%;
+  font-family: 'Audiowide', cursive;
 }
 
 h1 {
